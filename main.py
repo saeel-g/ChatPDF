@@ -20,7 +20,7 @@ with st.sidebar:
     \n Find the code on [GitHub](https://github.com/saeel-g/ChatPDF-Bot)
 ''')
     
-openai_api_key = 'auth_key'
+openai_api_key = 'openai_api_key'
 
 def main():
     st.header('Chat with PDF 🗣️')
@@ -51,7 +51,7 @@ def main():
             # st.write('Embeddings loaded')
         
         else:
-            embeddings = OpenAIEmbeddings(api_key=openai_api_key)
+            embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
             VectorStore=FAISS.from_texts(chunk, embedding=embeddings)
             with open(f"{store_name}.pkl", 'wb') as f:
                 pickle.dump(VectorStore, f)
@@ -62,7 +62,7 @@ def main():
         query=st.text_input("please ask a question regarding given PDF:")
         if query:
             docs=VectorStore.similarity_search(query=query, k=3) 
-            llm=OpenAI(api_key=openai_api_key,model_name='gpt-3.5-turbo') 
+            llm=OpenAI(openai_api_key=openai_api_key,model_name='gpt-3.5-turbo') 
             chain=load_qa_chain(llm=llm, chain_type='stuff')
             response=chain.run(input_documents=docs, question=query)
             st.write(response)
