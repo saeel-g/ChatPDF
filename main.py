@@ -51,7 +51,7 @@ def main():
             # st.write('Embeddings loaded')
         
         else:
-            embeddings=OpenAIEmbeddings()
+            embeddings = OpenAIEmbeddings(api_key=openai_api_key)
             VectorStore=FAISS.from_texts(chunk, embedding=embeddings)
             with open(f"{store_name}.pkl", 'wb') as f:
                 pickle.dump(VectorStore, f)
