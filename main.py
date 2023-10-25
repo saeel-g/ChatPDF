@@ -20,7 +20,7 @@ with st.sidebar:
     \n Find the code on [GitHub](https://github.com/saeel-g/ChatPDF-Bot)
 ''')
     
-api_key = auth_key
+api_key = 'auth_key'
 
 def main():
     st.header('Chat with PDF 🗣️')
