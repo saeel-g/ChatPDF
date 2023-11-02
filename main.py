@@ -20,7 +20,6 @@ with st.sidebar:
     \n Find the code on [GitHub](https://github.com/saeel-g/ChatPDF-Bot)
 ''')
     
-openai_api_key = 'openai_api_key'
 
 def main():
     st.header('Chat with PDF 🗣️')
