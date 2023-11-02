@@ -16,7 +16,7 @@ The Chat PDF App is a simple web application that allows users to upload PDF fil
 * **Screencast Tutorial:** You can watch a detailed explanation of the codebase in a screencast here.
 * **Cloud Deployment:** The application is deployed in a cloud environment, and you can access it here.
 ## Working
-Watch this [Link text Here](https://drive.google.com/file/d/1rRhhAdWNvFYexT7-Mw_S9HAwHuwfQTH4/view?usp=sharing)
+Watch this [Video](https://drive.google.com/file/d/1rRhhAdWNvFYexT7-Mw_S9HAwHuwfQTH4/view?usp=sharing)
 
 
 ## Getting Started
